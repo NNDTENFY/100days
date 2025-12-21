@@ -1,0 +1,12 @@
+streamlit>=1.37.0
+pandas
+polars
+numpy
+requests
+matplotlib
+seaborn
+plotly
+wordcloud
+emoji
+Pillow
+streamlit-lottie
