@@ -697,7 +697,7 @@ markov_model = build_markov_model(df["text"])
 
 # ---------------- ГЛАВНАЯ СТРАНИЦА (HERO HEADER) ----------------
 # Убираем старый st.title("💖 100 Дней Вместе"), так как у нас теперь красивый header
-start_date = datetime(2025, 9, 14, 0, 35, 0)
+start_date = datetime(2025, 9, 13, 22, 35, 0)
 now = datetime.now()
 diff = now - start_date
 
@@ -905,7 +905,7 @@ def get_hall_of_fame_data(df, selected_authors, start_date=None):
     apology_count = df_period[apology_mask]["from"].value_counts().to_dict()
 
     # 13. --- НОВАЯ МЕТРИКА: ПОДДЕРЖКА (The Therapist) ---
-    support_regex = r"всё будет|пережива|справи|спокой|забей|норм|держись|понимаю|не бойся|всё хорошо|поддерживаю|Как ты"
+    support_regex = r"всё будет|пережива|справи|спокой|забей|норм|держись|понимаю|не бойся|всё хорошо|поддерживаю|как ты"
     support_mask = df_period["text"].str.contains(support_regex, case=False, na=False)
     support_count = df_period[support_mask]["from"].value_counts().to_dict()
     
